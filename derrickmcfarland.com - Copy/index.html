@@ -1,0 +1,210 @@
+
+<!--start PHP
+<?php
+// submit button clicked
+if ($_POST['submit']) {
+	// If a field is not properly filled an error message will alert the user to fill the field
+	if (!$_POST['name']) {
+		$error="<br/>- Enter your name";
+	}
+	if (!$_POST['email']) {
+		$error.="<br/>- Enter your email";
+	}
+	if (!$_POST['message']) {
+		$error.="<br/>- Enter your message";
+	}
+	if (!$_POST['check']) {
+		$error.="<br/>- Confirm you are not a robot";
+	}
+	//alert occurs here using the variables initialized above
+	if ($error) {
+		$result='<div class="alert alert-danger" role="alert"><strong>Whoops, I think you missed something.</strong> Please correct the following: '.$error.' </div>';
+	}
+	//if all fields are properly filled, a success message alerts the user and sends the message via email
+	else{
+		mail("derrickmcfarland2014@gmail.com", "New Contact Message", "Name: ".$_POST['name']."
+		Email: ".$_POST['email']."
+		Message: ".$_POST['message']);
+		{
+		$result='<div class="alert alert-success" role="alert">Thank you for your message. I\'ll be in touch soon.</div>';
+		}
+	}
+}
+?>
+end PHP-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.png">
+    <title>derrick mcfarland</title>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed|Walter+Turncoat" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+		<!--Begin Nav-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="logo">
+      <a href="#home"><img src="img/logo-sm.png" alt="DM-logo"></a>
+    </div>
+    <ul>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#qualities">Qualities</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </div>
+</nav>
+<!--End Nav-->
+<!--Begin Header-->
+<a name="home"></a>
+<header>
+  <div class="heading-wrapper">
+    <h1>DERRICK McFARLAND</h1>
+    <p>Web Developer | Las Vegas, NV</p>
+  </div>
+  <a href="#about">
+    <div class="arrow bounce"></div><!-- credit: https://codepen.io/dodozhang21/pen/siKtp -->
+  </a>
+</header>
+<!--End Header-->
+<!--Begin About-->
+<section id="about"><a name="about"></a>
+	<div class="row">
+  <div class="col-md-2 col-md-offset-2">
+		<div class="profilePic"><img src="img/my-photo-sq.png"></div>
+	</div>
+  <div class="col-md-5 col-md-offset-1">
+		<h2>Derrick McFarland</h2>
+    <h4>Web Developer | Las Vegas, NV</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button class="btn btn-default">
+				<span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+          <a href="Derrick McFarland web developer resume.pdf" download> Download My Résumé</a></button>
+	</div>
+	</div>
+</section>
+<!--End About-->
+<!--Begin Core Qualities Quiz -->
+<section id="qualities" name="qualities">
+  <div class="modal-wrap">
+    <div class="modal-header"><span class="is-active"></span><span></span><span></span></div>
+    <div class="modal-bodies">
+      <div class="modal-body modal-body-step-1 is-showing">
+        <div class="title">Core Qualities Questionaire</div>
+        <div class="description">I think we'd work really well together, you and I. But don't take my word for it. <strong>Click Start</strong> to discover what so many others already know about working with me.</div>
+          <div class="text-center">
+            <div class="button">Start</div>
+          </div>
+      </div>
+      <div class="modal-body modal-body-step-2"><!--Card 2-->
+        <div class="title">Question 1</div>
+        <div class="description">While searching for a suitable candidate, which of the following characteristics do you find most appealing?</div>
+        <form>
+          <label>
+            <input type="radio" name="radio"/>ability to use a logical approach to problem solving
+          </label>
+          <label>
+            <input type="radio" name="radio" id="radio2"/>Moral Conscientiousness
+          </label>
+          <label>
+            <input type="radio" name="radio" id="radio3"/>Genuine desires to assist the client with the best possible intentions
+          </label>
+          <label>
+            <input type="radio" name="radio" id="radio4"/>All of the above
+          </label>
+          <div class="text-center fade-in">
+            <div class="button">Continue</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-body modal-body-step-3"><!--Card 3-->
+        <div class="title">Matthew Fotion Says</div>
+        <img class="matthew" src="img/mattfotion.png" alt="matthew fotion photo">
+        <div class="description">"Derrick has been a true pleasure to work with, and I've had the privilege of learning a multitude of quality traits during our shared work history. He taught me that utilizing a logical approach to problem solving, goes further than relying solely on emotionally based tools. Derrick is a morally conscientious person who genuinely wants to assist a client with the best possible intentions."</div>
+        <div class="text-center">
+          <div class="button">Next Question</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="rerun-button">ReRun</div>
+  </div>
+</section>
+<!--End Core Qualities Quiz -->
+<!--Start Contact-->
+<section id="contact"><a name="contact"></a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3"><!--center the form in the middle of the 12 columns with 3 columns on each side of a 6 column content area-->
+    <h1>Contact Form</h1>
+    <p>Send me a message with the simple form below</p>
+
+    <?php echo $result;?> <!--error and success messages post here-->
+
+    <form method="post" role="form"> <!-- ADD this to send user to a thank you page after submitting the form ** action="thankyou.php" **-->
+
+      <div class="form-group">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" value="<?php echo $_POST['name'];?>" >
+      </div>
+
+      <div class="form-group">
+        <input type="email" name="email" class="form-control" placeholder="Your Email" value="<?php echo $_POST['email'];?>">
+      </div>
+
+      <div class="form-group">
+        <textarea name="message" rows="5" class="form-control" placeholder="Your Message..."><?php echo $_POST['message'];?></textarea>
+      </div>
+
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="check"> I am not a robot
+        </label>
+      </div>
+
+      <div align="center">
+        <input type="submit" name="submit" class="btn btn-default" value="Send Message"></input>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+</section>
+<!--End Contact-->
+<!--Begin Footer-->
+<footer>
+  <p>&copy copyright derrickmcfarland.com 2017</p>
+  <ul>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#competencies">Competencies</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+</footer>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <script src="javascript/js.js" charset="utf-8"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
